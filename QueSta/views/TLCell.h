@@ -11,8 +11,10 @@
 @interface TLCell : UITableViewCell
 {
     IBOutlet UIImageView *_profileImageView;
+    IBOutlet UIView *_containerView;
 }
 
 @property (nonatomic, strong) UIImageView *profileImageView;
+@property (nonatomic, strong) UIView *containerView;
 
 @end

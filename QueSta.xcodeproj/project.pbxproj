@@ -23,7 +23,6 @@
 		7078EEFE16EAB0B200083811 /* default_profile.png in Resources */ = {isa = PBXBuildFile; fileRef = 7078EEFD16EAB0B200083811 /* default_profile.png */; };
 		7078EF0216EAC50700083811 /* ProfileCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7078EF0116EAC50700083811 /* ProfileCell.m */; };
 		7078EF0616EAD4DF00083811 /* ProfileInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 7078EF0516EAD4DF00083811 /* ProfileInfo.m */; };
-		7078EF0916EAD5C500083811 /* EditNameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7078EF0816EAD5C400083811 /* EditNameViewController.m */; };
 		7078EF8916EB432F00083811 /* default_badge.png in Resources */ = {isa = PBXBuildFile; fileRef = 7078EF8816EB432F00083811 /* default_badge.png */; };
 		7078EF8F16EB4AB300083811 /* default_background.png in Resources */ = {isa = PBXBuildFile; fileRef = 7078EF8E16EB4AB200083811 /* default_background.png */; };
 		7078EF9216EB4BEC00083811 /* profile.png in Resources */ = {isa = PBXBuildFile; fileRef = 7078EF9016EB4BEC00083811 /* profile.png */; };
@@ -34,6 +33,9 @@
 		7078EF9D16EB9FDE00083811 /* SwitchCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7078EF9C16EB9FDE00083811 /* SwitchCell.m */; };
 		7078EFA016EBA02600083811 /* Graph7DaysCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7078EF9F16EBA02600083811 /* Graph7DaysCell.m */; };
 		7078EFA316EC264800083811 /* TLCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7078EFA216EC264500083811 /* TLCell.m */; };
+		7078EFA616EC62F100083811 /* EditProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7078EFA516EC62EF00083811 /* EditProfileViewController.m */; };
+		7098330C16EC64DB0093CA7D /* EditProfileImageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7098330B16EC64DB0093CA7D /* EditProfileImageCell.m */; };
+		7098330F16EC64F10093CA7D /* EditProfileTextCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7098330E16EC64F10093CA7D /* EditProfileTextCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -62,8 +64,6 @@
 		7078EF0116EAC50700083811 /* ProfileCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ProfileCell.m; path = views/ProfileCell.m; sourceTree = "<group>"; };
 		7078EF0416EAD4DF00083811 /* ProfileInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ProfileInfo.h; path = models/ProfileInfo.h; sourceTree = "<group>"; };
 		7078EF0516EAD4DF00083811 /* ProfileInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ProfileInfo.m; path = models/ProfileInfo.m; sourceTree = "<group>"; };
-		7078EF0716EAD5C400083811 /* EditNameViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EditNameViewController.h; path = controllers/EditNameViewController.h; sourceTree = "<group>"; };
-		7078EF0816EAD5C400083811 /* EditNameViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EditNameViewController.m; path = controllers/EditNameViewController.m; sourceTree = "<group>"; };
 		7078EF8816EB432F00083811 /* default_badge.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = default_badge.png; path = images/default_badge.png; sourceTree = "<group>"; };
 		7078EF8E16EB4AB200083811 /* default_background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = default_background.png; path = images/default_background.png; sourceTree = "<group>"; };
 		7078EF9016EB4BEC00083811 /* profile.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = profile.png; path = images/profile.png; sourceTree = "<group>"; };
@@ -78,6 +78,12 @@
 		7078EF9F16EBA02600083811 /* Graph7DaysCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Graph7DaysCell.m; path = views/Graph7DaysCell.m; sourceTree = "<group>"; };
 		7078EFA116EC264400083811 /* TLCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TLCell.h; path = views/TLCell.h; sourceTree = "<group>"; };
 		7078EFA216EC264500083811 /* TLCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TLCell.m; path = views/TLCell.m; sourceTree = "<group>"; };
+		7078EFA416EC62EE00083811 /* EditProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EditProfileViewController.h; path = controllers/EditProfileViewController.h; sourceTree = "<group>"; };
+		7078EFA516EC62EF00083811 /* EditProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EditProfileViewController.m; path = controllers/EditProfileViewController.m; sourceTree = "<group>"; };
+		7098330A16EC64DB0093CA7D /* EditProfileImageCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EditProfileImageCell.h; path = views/EditProfileImageCell.h; sourceTree = "<group>"; };
+		7098330B16EC64DB0093CA7D /* EditProfileImageCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EditProfileImageCell.m; path = views/EditProfileImageCell.m; sourceTree = "<group>"; };
+		7098330D16EC64F10093CA7D /* EditProfileTextCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditProfileTextCell.h; sourceTree = "<group>"; };
+		7098330E16EC64F10093CA7D /* EditProfileTextCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EditProfileTextCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -155,8 +161,8 @@
 			children = (
 				7078EEF616EA3C2900083811 /* ProfileViewController.h */,
 				7078EEF716EA3C2900083811 /* ProfileViewController.m */,
-				7078EF0716EAD5C400083811 /* EditNameViewController.h */,
-				7078EF0816EAD5C400083811 /* EditNameViewController.m */,
+				7078EFA416EC62EE00083811 /* EditProfileViewController.h */,
+				7078EFA516EC62EF00083811 /* EditProfileViewController.m */,
 				7078EEF216EA3BEC00083811 /* TLViewController.h */,
 				7078EEF316EA3BEC00083811 /* TLViewController.m */,
 				7078EEF916EA3C4100083811 /* PostViewController.h */,
@@ -184,6 +190,10 @@
 			children = (
 				7078EF0016EAC50700083811 /* ProfileCell.h */,
 				7078EF0116EAC50700083811 /* ProfileCell.m */,
+				7098330A16EC64DB0093CA7D /* EditProfileImageCell.h */,
+				7098330B16EC64DB0093CA7D /* EditProfileImageCell.m */,
+				7098330D16EC64F10093CA7D /* EditProfileTextCell.h */,
+				7098330E16EC64F10093CA7D /* EditProfileTextCell.m */,
 				7078EF9B16EB9FDD00083811 /* SwitchCell.h */,
 				7078EF9C16EB9FDE00083811 /* SwitchCell.m */,
 				7078EF9416EB521A00083811 /* GraphCell.h */,
@@ -285,11 +295,13 @@
 				7078EEFB16EA3C4100083811 /* PostViewController.m in Sources */,
 				7078EF0216EAC50700083811 /* ProfileCell.m in Sources */,
 				7078EF0616EAD4DF00083811 /* ProfileInfo.m in Sources */,
-				7078EF0916EAD5C500083811 /* EditNameViewController.m in Sources */,
 				7078EF9616EB521A00083811 /* GraphCell.m in Sources */,
 				7078EF9D16EB9FDE00083811 /* SwitchCell.m in Sources */,
 				7078EFA016EBA02600083811 /* Graph7DaysCell.m in Sources */,
 				7078EFA316EC264800083811 /* TLCell.m in Sources */,
+				7078EFA616EC62F100083811 /* EditProfileViewController.m in Sources */,
+				7098330C16EC64DB0093CA7D /* EditProfileImageCell.m in Sources */,
+				7098330F16EC64F10093CA7D /* EditProfileTextCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

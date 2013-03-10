@@ -12,9 +12,11 @@
 {
     IBOutlet UIView *_graphBackgroundView;
     IBOutlet UIView *_graphView;
+    IBOutlet UIView *_containerView;
 }
 
 @property (nonatomic, strong) UIView *graphBackgroundView;
 @property (nonatomic, strong) UIView *graphView;
+@property (nonatomic, strong) UIView *containerView;
 
 @end

@@ -10,6 +10,7 @@
 
 @implementation TLCell
 @synthesize profileImageView = _profileImageView;
+@synthesize containerView = _containerView;
 
 - (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
 {

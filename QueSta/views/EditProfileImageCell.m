@@ -1,18 +1,14 @@
 //
-//  GraphCell.m
+//  EditProfileImageCell.m
 //  QueSta
 //
-//  Created by yusuke_yasuo on 2013/03/09.
+//  Created by yusuke_yasuo on 2013/03/10.
 //  Copyright (c) 2013年 yusuke_yasuo. All rights reserved.
 //
 
-#import "GraphCell.h"
+#import "EditProfileImageCell.h"
 
-@implementation GraphCell
-
-@synthesize graphBackgroundView = _graphBackgroundView;
-@synthesize graphView = _graphView;
-@synthesize containerView = _containerView;
+@implementation EditProfileImageCell
 
 - (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
 {

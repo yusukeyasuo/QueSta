@@ -68,7 +68,7 @@
 {
     if (indexPath.row == 0)
     {
-        return 150.0f;
+        return 160.0f;
     } else if (indexPath.row == 1) {
         return 44.0f;
     } else {
@@ -76,31 +76,53 @@
     }
 }
 
+/*
+- (void)tableView:(UITableView *)tableView
+  willDisplayCell:(UITableViewCell *)cell
+forRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    if (indexPath.row == 1) {   // switchCell
+        cell.backgroundColor = [UIColor darkGrayColor];
+    }
+}
+*/
+
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     if (indexPath.row == 0)
     {
         static NSString *CellIdentifier = @"ProfileCell";
         ProfileCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
+        
         cell.profileImageView.layer.cornerRadius = 8.0f;
         cell.profileImageView.clipsToBounds = YES;
+        
         CALayer *layer = [cell.badgeImageView layer];
         [layer setMasksToBounds:YES];
         [layer setBorderWidth: 1.f];
         [layer setBorderColor:[[UIColor grayColor] CGColor]];
+        
         return cell;
     } else if (indexPath.row == 1) {
         static NSString *CellIdentifier = @"SwitchCell";
         SwitchCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
+        
         return cell;
     } else {
         if (!_segmentedControlStatus) { // 統計
             static NSString *CellIdentifier = @"GraphCell";
             GraphCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
+            
             cell.graphBackgroundView.layer.cornerRadius = 5.0f;
             cell.graphBackgroundView.clipsToBounds = YES;
+            
             cell.graphView.layer.cornerRadius = 4.0f;
             cell.graphView.clipsToBounds = YES;
+            
+            cell.containerView.backgroundColor = [UIColor colorWithRed:0.933 green:0.933 blue:0.933 alpha:1];
+            cell.containerView.layer.shadowOpacity = 0.2f;
+            cell.containerView.layer.shadowOffset = CGSizeMake(0, 2.0f);
+            
             return cell;
         } else {    // 過去7日間
             static NSString *CellIdentifier = @"Graph7DaysCell";

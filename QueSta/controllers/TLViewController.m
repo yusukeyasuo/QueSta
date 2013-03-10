@@ -60,9 +60,13 @@
 {
     static NSString *CellIdentifier = @"Cell";
     TLCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
-    
+
     cell.profileImageView.layer.cornerRadius = 8.0f;
     cell.profileImageView.clipsToBounds = YES;
+    
+    cell.containerView.backgroundColor = [UIColor colorWithRed:0.933 green:0.933 blue:0.933 alpha:1];
+    cell.containerView.layer.shadowOpacity = 0.2f;
+    cell.containerView.layer.shadowOffset = CGSizeMake(0, 2.0f);
 
     return cell;
 }

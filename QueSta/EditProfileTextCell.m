@@ -1,18 +1,17 @@
 //
-//  GraphCell.m
+//  EditProfileTextCell.m
 //  QueSta
 //
-//  Created by yusuke_yasuo on 2013/03/09.
+//  Created by yusuke_yasuo on 2013/03/10.
 //  Copyright (c) 2013年 yusuke_yasuo. All rights reserved.
 //
 
-#import "GraphCell.h"
+#import "EditProfileTextCell.h"
 
-@implementation GraphCell
+@implementation EditProfileTextCell
 
-@synthesize graphBackgroundView = _graphBackgroundView;
-@synthesize graphView = _graphView;
-@synthesize containerView = _containerView;
+@synthesize label = _label;
+@synthesize textField = _textField;
 
 - (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
 {
