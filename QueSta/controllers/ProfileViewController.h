@@ -12,6 +12,8 @@
 @interface ProfileViewController : UIViewController <UITableViewDataSource, UITableViewDelegate>
 {
     IBOutlet UITableView *_tableView;
+    
+    NSInteger _segmentedControlStatus;
 }
 
 @end

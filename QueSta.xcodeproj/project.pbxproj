@@ -29,6 +29,11 @@
 		7078EF9216EB4BEC00083811 /* profile.png in Resources */ = {isa = PBXBuildFile; fileRef = 7078EF9016EB4BEC00083811 /* profile.png */; };
 		7078EF9316EB4BEC00083811 /* profile@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7078EF9116EB4BEC00083811 /* profile@2x.png */; };
 		7078EF9616EB521A00083811 /* GraphCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7078EF9516EB521A00083811 /* GraphCell.m */; };
+		7078EF9916EB9A5500083811 /* note.png in Resources */ = {isa = PBXBuildFile; fileRef = 7078EF9716EB9A5400083811 /* note.png */; };
+		7078EF9A16EB9A5500083811 /* note@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7078EF9816EB9A5500083811 /* note@2x.png */; };
+		7078EF9D16EB9FDE00083811 /* SwitchCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7078EF9C16EB9FDE00083811 /* SwitchCell.m */; };
+		7078EFA016EBA02600083811 /* Graph7DaysCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7078EF9F16EBA02600083811 /* Graph7DaysCell.m */; };
+		7078EFA316EC264800083811 /* TLCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7078EFA216EC264500083811 /* TLCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -65,6 +70,14 @@
 		7078EF9116EB4BEC00083811 /* profile@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "profile@2x.png"; path = "images/profile@2x.png"; sourceTree = "<group>"; };
 		7078EF9416EB521A00083811 /* GraphCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GraphCell.h; path = views/GraphCell.h; sourceTree = "<group>"; };
 		7078EF9516EB521A00083811 /* GraphCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GraphCell.m; path = views/GraphCell.m; sourceTree = "<group>"; };
+		7078EF9716EB9A5400083811 /* note.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = note.png; path = images/note.png; sourceTree = "<group>"; };
+		7078EF9816EB9A5500083811 /* note@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "note@2x.png"; path = "images/note@2x.png"; sourceTree = "<group>"; };
+		7078EF9B16EB9FDD00083811 /* SwitchCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SwitchCell.h; path = views/SwitchCell.h; sourceTree = "<group>"; };
+		7078EF9C16EB9FDE00083811 /* SwitchCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SwitchCell.m; path = views/SwitchCell.m; sourceTree = "<group>"; };
+		7078EF9E16EBA02500083811 /* Graph7DaysCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Graph7DaysCell.h; path = views/Graph7DaysCell.h; sourceTree = "<group>"; };
+		7078EF9F16EBA02600083811 /* Graph7DaysCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Graph7DaysCell.m; path = views/Graph7DaysCell.m; sourceTree = "<group>"; };
+		7078EFA116EC264400083811 /* TLCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TLCell.h; path = views/TLCell.h; sourceTree = "<group>"; };
+		7078EFA216EC264500083811 /* TLCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TLCell.m; path = views/TLCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -155,6 +168,8 @@
 		7078EEFC16EAB09900083811 /* images */ = {
 			isa = PBXGroup;
 			children = (
+				7078EF9716EB9A5400083811 /* note.png */,
+				7078EF9816EB9A5500083811 /* note@2x.png */,
 				7078EF9016EB4BEC00083811 /* profile.png */,
 				7078EF9116EB4BEC00083811 /* profile@2x.png */,
 				7078EF8E16EB4AB200083811 /* default_background.png */,
@@ -169,8 +184,14 @@
 			children = (
 				7078EF0016EAC50700083811 /* ProfileCell.h */,
 				7078EF0116EAC50700083811 /* ProfileCell.m */,
+				7078EF9B16EB9FDD00083811 /* SwitchCell.h */,
+				7078EF9C16EB9FDE00083811 /* SwitchCell.m */,
 				7078EF9416EB521A00083811 /* GraphCell.h */,
 				7078EF9516EB521A00083811 /* GraphCell.m */,
+				7078EF9E16EBA02500083811 /* Graph7DaysCell.h */,
+				7078EF9F16EBA02600083811 /* Graph7DaysCell.m */,
+				7078EFA116EC264400083811 /* TLCell.h */,
+				7078EFA216EC264500083811 /* TLCell.m */,
 			);
 			name = views;
 			sourceTree = "<group>";
@@ -245,6 +266,8 @@
 				7078EF8F16EB4AB300083811 /* default_background.png in Resources */,
 				7078EF9216EB4BEC00083811 /* profile.png in Resources */,
 				7078EF9316EB4BEC00083811 /* profile@2x.png in Resources */,
+				7078EF9916EB9A5500083811 /* note.png in Resources */,
+				7078EF9A16EB9A5500083811 /* note@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -264,6 +287,9 @@
 				7078EF0616EAD4DF00083811 /* ProfileInfo.m in Sources */,
 				7078EF0916EAD5C500083811 /* EditNameViewController.m in Sources */,
 				7078EF9616EB521A00083811 /* GraphCell.m in Sources */,
+				7078EF9D16EB9FDE00083811 /* SwitchCell.m in Sources */,
+				7078EFA016EBA02600083811 /* Graph7DaysCell.m in Sources */,
+				7078EFA316EC264800083811 /* TLCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

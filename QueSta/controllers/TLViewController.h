@@ -7,7 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <QuartzCore/QuartzCore.h>
 
 @interface TLViewController : UIViewController
+{
+    IBOutlet UITableView *_tableView;
+}
 
 @end

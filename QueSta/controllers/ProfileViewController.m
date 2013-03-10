@@ -8,7 +8,9 @@
 
 #import "ProfileViewController.h"
 #import "ProfileCell.h"
+#import "SwitchCell.h"
 #import "GraphCell.h"
+#import "Graph7DaysCell.h"
 
 @interface ProfileViewController ()
 
@@ -32,12 +34,22 @@
     self.navigationController.navigationBar.tintColor = [UIColor blackColor];
     _tableView.backgroundColor = [UIColor clearColor];
     
+    _segmentedControlStatus = 0;    // 統計
 }
 
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+#pragma mark - IBAction
+
+- (IBAction)changeSegmentedControl:(id)sender
+{
+    UISegmentedControl *sc = sender;
+    _segmentedControlStatus = sc.selectedSegmentIndex;
+    [_tableView reloadData];
 }
 
 #pragma mark - Table view data source
@@ -49,7 +61,7 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return 2;
+    return 3;
 }
 
 - (float)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -57,6 +69,8 @@
     if (indexPath.row == 0)
     {
         return 150.0f;
+    } else if (indexPath.row == 1) {
+        return 44.0f;
     } else {
         return 255.0f;
     }
@@ -74,24 +88,25 @@
         [layer setMasksToBounds:YES];
         [layer setBorderWidth: 1.f];
         [layer setBorderColor:[[UIColor grayColor] CGColor]];
-
+        return cell;
+    } else if (indexPath.row == 1) {
+        static NSString *CellIdentifier = @"SwitchCell";
+        SwitchCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
         return cell;
     } else {
-        static NSString *CellIdentifier = @"GraphCell";
-        GraphCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
-        cell.graphBackgroundView.layer.cornerRadius = 5.0f;
-        cell.graphBackgroundView.clipsToBounds = YES;
-        cell.graphView.layer.cornerRadius = 4.0f;
-        cell.graphView.clipsToBounds = YES;
-        /*
-        cell.fileImageView.layer.cornerRadius = 8.0;
-        cell.profileImageView.clipsToBounds = YES;
-        CALayer *layer = [cell.badgeImageView layer];
-        [layer setMasksToBounds:YES];
-        [layer setBorderWidth: 1.f];
-        [layer setBorderColor:[[UIColor grayColor] CGColor]];
-        */
-        return cell;
+        if (!_segmentedControlStatus) { // 統計
+            static NSString *CellIdentifier = @"GraphCell";
+            GraphCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
+            cell.graphBackgroundView.layer.cornerRadius = 5.0f;
+            cell.graphBackgroundView.clipsToBounds = YES;
+            cell.graphView.layer.cornerRadius = 4.0f;
+            cell.graphView.clipsToBounds = YES;
+            return cell;
+        } else {    // 過去7日間
+            static NSString *CellIdentifier = @"Graph7DaysCell";
+            Graph7DaysCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
+            return cell;
+        }
     }
 
 }
