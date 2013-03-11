@@ -9,6 +9,8 @@
 #import "EditProfileViewController.h"
 #import "EditProfileImageCell.h"
 #import "EditProfileTextCell.h"
+#import "ProfileManager.h"
+#import "StatusManager.h"
 
 @interface EditProfileViewController ()
 
@@ -41,6 +43,14 @@
     }
     _actionSheet.cancelButtonIndex = [_actionSheet addButtonWithTitle:@"キャンセル"];
     _imagePickerController = [[UIImagePickerController alloc] init];
+    _imagePickerController.delegate = self;
+    
+    _profile = [ProfileManager sharedManager].profileArray[0];
+    _status = [StatusManager sharedManager].statusArray[0];
+    
+    _profileImage = _profile.profileImage;
+    _name = _profile.name;
+    _goal = _profile.goal;
 }
 
 - (void)didReceiveMemoryWarning
@@ -50,6 +60,16 @@
 }
 
 #pragma mark - IBAction
+
+- (IBAction)saveButtonPressed:(id)sender
+{
+    Profile *profile = [[Profile alloc] init];
+    profile.name = _name;
+    profile.goal = _goal;
+    profile.profileImage = _profileImage;
+    [[ProfileManager sharedManager] updateProfileArray:profile];
+    [self.navigationController popToViewController:[self.navigationController.viewControllers objectAtIndex:0]animated:YES];
+}
 
 #pragma mark - Action Sheet Delegate
 
@@ -63,7 +83,6 @@
                 return;
             }
             
-            _imagePickerController = [[UIImagePickerController alloc] init];
             _imagePickerController.sourceType = sourceType;
             _imagePickerController.allowsEditing = YES;
             
@@ -76,7 +95,6 @@
                 return;
             }
             
-            _imagePickerController = [[UIImagePickerController alloc] init];
             _imagePickerController.sourceType = sourceType;
             _imagePickerController.allowsEditing = YES;
             
@@ -85,6 +103,34 @@
         default:
             return;
     }
+}
+
+#pragma mark - Picker view delegate
+
+- (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info
+{
+    NSLog(@"selected");
+    _profileImage = [info objectForKey:UIImagePickerControllerEditedImage];
+    [self dismissViewControllerAnimated:YES completion:nil];
+    [self.tableView reloadData];
+}
+
+#pragma mark - TextField Delegate
+- (BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string
+{
+    switch (textField.tag) {
+        case 1:
+            _name = textField.text;
+            break;
+            
+        case 2:
+            _goal = textField.text;
+            break;
+            
+        default:
+            break;
+    }
+    return YES;
 }
 
 #pragma mark - Table view data source
@@ -127,25 +173,29 @@
     if (indexPath.section == 0) {
         static NSString *CellIdentifier = @"ImageCell";
         EditProfileImageCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
-        cell.backgroundColor = [UIColor colorWithRed:0.933 green:0.933 blue:0.933 alpha:1];
+        cell.backgroundColor = [UIColor colorWithRed:0.933 green:0.933 blue:0.933 alpha:1]; // #EEEEEE
+        
+        [cell.profileImage setImage:_profileImage];
 
         return cell;
     } else if (indexPath.section == 1) {
         static NSString *CellIdentifier = @"TextCell";
         EditProfileTextCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
-        cell.backgroundColor = [UIColor colorWithRed:0.933 green:0.933 blue:0.933 alpha:1];
+        cell.backgroundColor = [UIColor colorWithRed:0.933 green:0.933 blue:0.933 alpha:1]; // #EEEEEE
         
         cell.label.text = @"名前";
-        cell.textField.text = @"Yusuke Yasuo";
+        cell.textField.text = _profile.name;
+        cell.textField.tag = 1;
         
         return cell;
     } else {
         static NSString *CellIdentifier = @"TextCell";
         EditProfileTextCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
-        cell.backgroundColor = [UIColor colorWithRed:0.933 green:0.933 blue:0.933 alpha:1];
+        cell.backgroundColor = [UIColor colorWithRed:0.933 green:0.933 blue:0.933 alpha:1]; // #EEEEEE
         
         cell.label.text = @"目標";
-        cell.textField.text = @"iOSプログラミングをマスターする";
+        cell.textField.text = _profile.goal;
+        cell.textField.tag = 2;
         
         return cell;
     }

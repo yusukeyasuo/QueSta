@@ -11,6 +11,11 @@
 @implementation ProfileCell
 
 @synthesize profileImageView = _profileImageView;
+@synthesize badgeImageView = _badgeImageView;
+@synthesize nameLabel = _nameLabel;
+@synthesize goalLabel = _goalLabel;
+@synthesize levelLabel = _levelLabel;
+@synthesize pointLabel = _pointLabel;
 
 - (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
 {

@@ -13,6 +13,9 @@
 @synthesize graphBackgroundView = _graphBackgroundView;
 @synthesize graphView = _graphView;
 @synthesize containerView = _containerView;
+@synthesize studyMinutes = _studyMinutes;
+@synthesize shortMinutes = _shortMinutes;
+@synthesize expense = _expense;
 
 - (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
 {

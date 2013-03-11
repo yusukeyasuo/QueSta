@@ -9,5 +9,10 @@
 #import <UIKit/UIKit.h>
 
 @interface EditProfileImageCell : UITableViewCell
+{
+    IBOutlet UIImageView *_profileImage;
+}
+
+@property (nonatomic, strong) UIImageView *profileImage;
 
 @end

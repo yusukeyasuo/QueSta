@@ -11,6 +11,8 @@
 #import "SwitchCell.h"
 #import "GraphCell.h"
 #import "Graph7DaysCell.h"
+#import "ProfileManager.h"
+#import "StatusManager.h"
 
 @interface ProfileViewController ()
 
@@ -34,7 +36,40 @@
     self.navigationController.navigationBar.tintColor = [UIColor blackColor];
     _tableView.backgroundColor = [UIColor clearColor];
     
-    _segmentedControlStatus = 0;    // 統計
+    // UISegmentedControl 初期値の設定
+    _segmentedControlStatus = 0;
+    
+    // Profileオブジェクトがない場合default値を設定
+    if (![ProfileManager sharedManager].profileArray)
+    {
+        Profile *profile = [[Profile alloc] init];
+        profile.profileImage = [UIImage imageNamed:@"default_profile.png"];
+        profile.name = @"久恵　数多";
+        profile.goal = @"○○○をマスターしたい！";
+        [[ProfileManager sharedManager] updateProfileArray:profile];
+    }
+    
+    // Statusオブジェクトがない場合default値を設定
+    if (![StatusManager sharedManager].statusArray[0])
+    {
+        Status *status = [[Status alloc] init];
+        status.studyMinutesAll = 0;
+        status.studyMinutes = 0;
+        status.level = 1;
+        status.expense = 0;
+        [[StatusManager sharedManager] updateStatus:status];
+    }
+    
+    _profile = [ProfileManager sharedManager].profileArray[0];
+    _status = [StatusManager sharedManager].statusArray[0];
+}
+
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    _profile = [ProfileManager sharedManager].profileArray[0];
+    _status = [StatusManager sharedManager].statusArray[0];
+    [_tableView reloadData];
 }
 
 - (void)didReceiveMemoryWarning
@@ -77,6 +112,7 @@
 }
 
 /*
+// Change UITableViewCell.backgroundColor
 - (void)tableView:(UITableView *)tableView
   willDisplayCell:(UITableViewCell *)cell
 forRowAtIndexPath:(NSIndexPath *)indexPath
@@ -94,8 +130,14 @@ forRowAtIndexPath:(NSIndexPath *)indexPath
         static NSString *CellIdentifier = @"ProfileCell";
         ProfileCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
         
+        cell.profileImageView.image = _profile.profileImage;
         cell.profileImageView.layer.cornerRadius = 8.0f;
         cell.profileImageView.clipsToBounds = YES;
+        
+        cell.nameLabel.text = _profile.name;
+        cell.goalLabel.text = _profile.goal;
+        cell.levelLabel.text = [NSString stringWithFormat:@"%d", _status.level];
+        cell.pointLabel.text = [NSString stringWithFormat:@"%d/%d", _status.studyMinutes, _status.level*60];
         
         CALayer *layer = [cell.badgeImageView layer];
         [layer setMasksToBounds:YES];
@@ -103,11 +145,13 @@ forRowAtIndexPath:(NSIndexPath *)indexPath
         [layer setBorderColor:[[UIColor grayColor] CGColor]];
         
         return cell;
+        
     } else if (indexPath.row == 1) {
         static NSString *CellIdentifier = @"SwitchCell";
         SwitchCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
         
         return cell;
+        
     } else {
         if (!_segmentedControlStatus) { // 統計
             static NSString *CellIdentifier = @"GraphCell";
@@ -123,11 +167,17 @@ forRowAtIndexPath:(NSIndexPath *)indexPath
             cell.containerView.layer.shadowOpacity = 0.2f;
             cell.containerView.layer.shadowOffset = CGSizeMake(0, 2.0f);
             
+            cell.studyMinutes.text = [NSString stringWithFormat:@"%d時間 %d分", _status.studyMinutesAll / 60, _status.studyMinutesAll % 60];
+            cell.shortMinutes.text = [NSString stringWithFormat:@"%d時間 %d分", (1000*60 - _status.studyMinutesAll) / 60, (1000*60 - _status.studyMinutesAll) % 60];
+            cell.expense.text = [NSString stringWithFormat:@"%d円", _status.expense];
+            
             return cell;
+            
         } else {    // 過去7日間
             static NSString *CellIdentifier = @"Graph7DaysCell";
             Graph7DaysCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
             return cell;
+            
         }
     }
 

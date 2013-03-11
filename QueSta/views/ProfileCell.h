@@ -12,9 +12,17 @@
 {
     IBOutlet UIImageView *_profileImageView;
     IBOutlet UIImageView *_badgeImageView;
+    IBOutlet UILabel *_nameLabel;
+    IBOutlet UILabel *_goalLabel;
+    IBOutlet UILabel *_levelLabel;
+    IBOutlet UILabel *_pointLabel;
 }
 
 @property (nonatomic, strong) UIImageView *profileImageView;
 @property (nonatomic, strong) UIImageView *badgeImageView;
+@property (nonatomic, strong) UILabel *nameLabel;
+@property (nonatomic, strong) UILabel *goalLabel;
+@property (nonatomic, strong) UILabel *levelLabel;
+@property (nonatomic, strong) UILabel *pointLabel;
 
 @end

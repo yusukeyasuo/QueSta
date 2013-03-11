@@ -8,12 +8,16 @@
 
 #import <UIKit/UIKit.h>
 #import <QuartzCore/QuartzCore.h>
+#import "Profile.h"
+#import "Status.h"
 
 @interface ProfileViewController : UIViewController <UITableViewDataSource, UITableViewDelegate>
 {
     IBOutlet UITableView *_tableView;
     
     NSInteger _segmentedControlStatus;
+    Profile *_profile;
+    Status *_status;
 }
 
 @end

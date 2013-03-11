@@ -7,13 +7,24 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <QuartzCore/QuartzCore.h>
+#import "Profile.h"
+#import "Status.h"
 
-@interface EditProfileViewController : UITableViewController <UIActionSheetDelegate, UIImagePickerControllerDelegate>
+@interface EditProfileViewController : UITableViewController <UIActionSheetDelegate, UINavigationControllerDelegate,UIImagePickerControllerDelegate, UITextFieldDelegate>
 {
     UIActionSheet *_actionSheet;
     UIImagePickerController *_imagePickerController;
+    UIImage *_profileImage;
     
     NSArray *_actionSheetItems;
+    NSString *_name;
+    NSString *_goal;
+    
+    Profile *_profile;
+    Status *_status;
 }
+
+- (IBAction)saveButtonPressed:(id)sender;
 
 @end
