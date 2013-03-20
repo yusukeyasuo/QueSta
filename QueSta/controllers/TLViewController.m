@@ -30,8 +30,8 @@
 {
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"black_background.png"]];
-
-    self.navigationController.navigationBar.tintColor = [UIColor colorWithRed:0 green:0.349 blue:0.698 alpha:1]; /*#0059b2*/
+    [self.navigationController.navigationBar setBackgroundImage:[UIImage imageNamed:@"navbar_background.png"] forBarMetrics:UIBarMetricsDefault];
+    //self.navigationController.navigationBar.tintColor = [UIColor colorWithRed:0.196 green:0.388 blue:0.545 alpha:1]; /*#32638b*/
     _tableView.backgroundColor = [UIColor clearColor];
 
 }
@@ -104,7 +104,7 @@ forRowAtIndexPath:(NSIndexPath *)indexPath
 {
     switch (indexPath.section) {
         case 0:
-            cell.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"black_background.png"]];
+            cell.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"default_background.png"]];
             break;
             
         case 1:

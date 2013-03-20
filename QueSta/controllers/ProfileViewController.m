@@ -33,7 +33,8 @@
 {
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"black_background.png"]];
-    self.navigationController.navigationBar.tintColor = [UIColor colorWithRed:0 green:0.349 blue:0.698 alpha:1]; /*#0059b2*/
+    [self.navigationController.navigationBar setBackgroundImage:[UIImage imageNamed:@"navbar_background.png"] forBarMetrics:UIBarMetricsDefault];
+    //self.navigationController.navigationBar.tintColor = [UIColor colorWithRed:0.196 green:0.388 blue:0.545 alpha:1]; /*#32638b*/
     _tableView.backgroundColor = [UIColor clearColor];
     [[ProfileManager sharedManager] loadProfile];
     
@@ -45,8 +46,8 @@
     {
         Profile *profile = [[Profile alloc] init];
         profile.profileImage = [UIImage imageNamed:@"default_profile.png"];
-        profile.name = @"久恵　数多";
-        profile.goal = @"○○○をマスターしたい！";
+        profile.name = @"Yusuke Yasuo";
+        profile.goal = @"プログラミングをマスターする";
         [[ProfileManager sharedManager] updateProfileArray:profile];
     }
     
@@ -158,8 +159,10 @@ forRowAtIndexPath:(NSIndexPath *)indexPath
             cell.graphBackgroundView.layer.cornerRadius = 5.0f;
             cell.graphBackgroundView.clipsToBounds = YES;
             
-            cell.graphView.layer.cornerRadius = 4.0f;
-            cell.graphView.clipsToBounds = YES;
+            float graphLength = (_status.studyMinutesAll / 1000) * 203.0;
+            UIView *graphView = [[UIView alloc] initWithFrame:CGRectMake(0, 203.0 - graphLength, 74.0, graphLength)];
+            graphView.backgroundColor = [UIColor colorWithRed:0.42 green:0.808 blue:0 alpha:1]; /*#6bce00*/
+            [cell.graphBackgroundView addSubview:graphView];
             
             cell.containerView.backgroundColor = [UIColor colorWithRed:0.933 green:0.933 blue:0.933 alpha:1];
             cell.containerView.layer.shadowOpacity = 0.2f;

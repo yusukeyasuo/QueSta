@@ -30,7 +30,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    self.navigationController.navigationBar.tintColor = [UIColor colorWithRed:0 green:0.349 blue:0.698 alpha:1]; /*#0059b2*/
+    self.navigationController.navigationBar.tintColor = [UIColor colorWithRed:0.196 green:0.388 blue:0.545 alpha:1]; /*#32638b*/
     self.tableView.backgroundView = nil;
     self.tableView.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"default_background.png"]];
     
@@ -62,6 +62,7 @@
 
 - (IBAction)saveButtonPressed:(id)sender
 {
+    [self.tableView reloadData];
     Profile *profile = [[Profile alloc] init];
     profile.name = _name;
     profile.goal = _goal;
@@ -104,7 +105,7 @@
     }
 }
 
-#pragma mark - Picker view delegate
+#pragma mark - imagePicker view delegate
 
 - (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info
 {
@@ -114,20 +115,28 @@
 }
 
 #pragma mark - TextField Delegate
-- (BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string
+
+-(void)textFieldDidEndEditing:(UITextField*)textField
 {
     switch (textField.tag) {
         case 1:
-            _name = [NSString stringWithFormat:@"%@%@", textField.text, string];
+            _name = [NSString stringWithFormat:@"%@", textField.text];
             break;
             
         case 2:
-            _goal = [NSString stringWithFormat:@"%@%@", textField.text, string];
+            NSLog(@"_goal: %@", textField.text);
+            _goal = [NSString stringWithFormat:@"%@", textField.text];
             break;
             
         default:
             break;
+            
     }
+}
+
+-(BOOL)textFieldShouldReturn:(UITextField*)textField
+{
+    [textField resignFirstResponder];
     return YES;
 }
 
@@ -182,7 +191,7 @@
         cell.backgroundColor = [UIColor colorWithRed:0.933 green:0.933 blue:0.933 alpha:1]; // #EEEEEE
         
         cell.label.text = @"名前";
-        cell.textField.text = _profile.name;
+        cell.textField.text = _name;
         cell.textField.tag = 1;
         
         return cell;
@@ -192,7 +201,7 @@
         cell.backgroundColor = [UIColor colorWithRed:0.933 green:0.933 blue:0.933 alpha:1]; // #EEEEEE
         
         cell.label.text = @"目標";
-        cell.textField.text = _profile.goal;
+        cell.textField.text = _goal;
         cell.textField.tag = 2;
         
         return cell;

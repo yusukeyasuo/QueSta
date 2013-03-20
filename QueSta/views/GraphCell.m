@@ -11,7 +11,6 @@
 @implementation GraphCell
 
 @synthesize graphBackgroundView = _graphBackgroundView;
-@synthesize graphView = _graphView;
 @synthesize containerView = _containerView;
 @synthesize studyMinutes = _studyMinutes;
 @synthesize shortMinutes = _shortMinutes;

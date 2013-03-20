@@ -11,7 +11,6 @@
 @interface GraphCell : UITableViewCell
 {
     IBOutlet UIView *_graphBackgroundView;
-    IBOutlet UIView *_graphView;
     IBOutlet UIView *_containerView;
     IBOutlet UILabel *_studyMinutes;
     IBOutlet UILabel *_shortMinutes;
@@ -19,7 +18,6 @@
 }
 
 @property (nonatomic, strong) UIView *graphBackgroundView;
-@property (nonatomic, strong) UIView *graphView;
 @property (nonatomic, strong) UIView *containerView;
 @property (nonatomic, strong) UILabel *studyMinutes;
 @property (nonatomic, strong) UILabel *shortMinutes;

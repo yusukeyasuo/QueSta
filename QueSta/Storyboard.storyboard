@@ -39,7 +39,7 @@
             </objects>
             <point key="canvasLocation" x="68" y="-277"/>
         </scene>
-        <!--Profile View Controller - クエスタ-->
+        <!--Profile View Controller-->
         <scene sceneID="9mw-2K-uEc">
             <objects>
                 <viewController id="J3H-pg-tNR" customClass="ProfileViewController" sceneMemberID="viewController">
@@ -47,7 +47,7 @@
                         <rect key="frame" x="0.0" y="64" width="320" height="455"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="97" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="5X4-qd-Gl5">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="97" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="5X4-qd-Gl5">
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="gray" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="ProfileCell" rowHeight="160" id="bT6-QR-t0m" customClass="ProfileCell">
@@ -170,7 +170,7 @@
                                             <subviews>
                                                 <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bar" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="pqA-Bg-S2P">
                                                     <constraints>
-                                                        <constraint firstAttribute="width" constant="171" id="YJ2-Cv-trf"/>
+                                                        <constraint firstAttribute="width" constant="301" id="a8I-TS-j6D"/>
                                                     </constraints>
                                                     <segments>
                                                         <segment title="統計"/>
@@ -184,8 +184,8 @@
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </view>
                                         <constraints>
-                                            <constraint firstItem="pqA-Bg-S2P" firstAttribute="top" secondItem="62Q-wL-GOK" secondAttribute="top" constant="7" id="gQf-46-JuU"/>
-                                            <constraint firstItem="pqA-Bg-S2P" firstAttribute="centerX" secondItem="62Q-wL-GOK" secondAttribute="centerX" type="default" id="yw0-JR-DSV"/>
+                                            <constraint firstItem="pqA-Bg-S2P" firstAttribute="centerX" secondItem="62Q-wL-GOK" secondAttribute="centerX" type="default" id="bnu-pb-Ap2"/>
+                                            <constraint firstItem="pqA-Bg-S2P" firstAttribute="top" secondItem="62Q-wL-GOK" secondAttribute="top" constant="7" id="htG-dw-G3m"/>
                                         </constraints>
                                         <connections>
                                             <outlet property="_segmentedControl" destination="pqA-Bg-S2P" id="Zx5-Rb-7YO"/>
@@ -201,18 +201,7 @@
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4VJ-0s-Sjw">
                                                     <subviews>
                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nqR-C6-V8B">
-                                                            <subviews>
-                                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dpV-zC-KZN">
-                                                                    <color key="backgroundColor" red="0.0" green="0.40000000000000002" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
-                                                                </view>
-                                                            </subviews>
                                                             <color key="backgroundColor" red="0.80000000000000004" green="0.80000000000000004" blue="0.80000000000000004" alpha="1" colorSpace="calibratedRGB"/>
-                                                            <constraints>
-                                                                <constraint firstItem="dpV-zC-KZN" firstAttribute="top" secondItem="nqR-C6-V8B" secondAttribute="top" constant="177" id="6Mz-SM-lAQ"/>
-                                                                <constraint firstItem="dpV-zC-KZN" firstAttribute="leading" secondItem="nqR-C6-V8B" secondAttribute="leading" type="default" id="IOi-58-6rs"/>
-                                                                <constraint firstItem="dpV-zC-KZN" firstAttribute="trailing" secondItem="nqR-C6-V8B" secondAttribute="trailing" type="default" id="dKt-MG-iIs"/>
-                                                                <constraint firstItem="dpV-zC-KZN" firstAttribute="bottom" secondItem="nqR-C6-V8B" secondAttribute="bottom" type="default" id="lDR-h7-CXr"/>
-                                                            </constraints>
                                                         </view>
                                                         <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="あと" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dd8-BN-Oa1">
                                                             <constraints>
@@ -312,7 +301,6 @@
                                             <outlet property="_containerView" destination="4VJ-0s-Sjw" id="Fs5-gO-BHI"/>
                                             <outlet property="_expense" destination="WHd-Og-o16" id="JhN-b7-kcR"/>
                                             <outlet property="_graphBackgroundView" destination="nqR-C6-V8B" id="f6V-T6-eY8"/>
-                                            <outlet property="_graphView" destination="dpV-zC-KZN" id="6m5-Fr-KZ0"/>
                                             <outlet property="_shortMinutes" destination="OHn-Kd-G0x" id="DIt-JT-lg2"/>
                                             <outlet property="_studyMinutes" destination="2ta-xq-Tj0" id="8hD-6e-Z2G"/>
                                         </connections>
@@ -450,7 +438,7 @@
                             <constraint firstItem="5X4-qd-Gl5" firstAttribute="trailing" secondItem="lIx-Tl-l6t" secondAttribute="trailing" type="default" id="wtT-RA-haU"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="クエスタ" id="FXa-cv-IwD"/>
+                    <navigationItem key="navigationItem" id="FXa-cv-IwD"/>
                     <connections>
                         <outlet property="_tableView" destination="5X4-qd-Gl5" id="53Z-eN-jyP"/>
                     </connections>
@@ -459,7 +447,7 @@
             </objects>
             <point key="canvasLocation" x="510" y="-277"/>
         </scene>
-        <!--Edit Profile View Controller - プロフィール編集-->
+        <!--Edit Profile View Controller-->
         <scene sceneID="dcT-Vi-eVH">
             <objects>
                 <tableViewController id="PNf-Gf-vem" customClass="EditProfileViewController" sceneMemberID="viewController">
@@ -551,8 +539,9 @@
                             <outlet property="delegate" destination="PNf-Gf-vem" id="XlP-1Y-igs"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="プロフィール編集" id="M4L-uK-ASU">
+                    <navigationItem key="navigationItem" id="M4L-uK-ASU">
                         <barButtonItem key="rightBarButtonItem" title="Save" id="fc6-f4-OYm">
+                            <color key="tintColor" red="0.41960784313725491" green="0.80784313725490198" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                             <connections>
                                 <action selector="saveButtonPressed:" destination="PNf-Gf-vem" id="bjk-xX-Qb9"/>
                             </connections>
@@ -579,7 +568,7 @@
             </objects>
             <point key="canvasLocation" x="68" y="397"/>
         </scene>
-        <!--View Controller - クエスタ-->
+        <!--View Controller-->
         <scene sceneID="1Iu-cO-qYH">
             <objects>
                 <viewController id="HDq-CE-CTh" customClass="TLViewController" sceneMemberID="viewController">
@@ -837,7 +826,7 @@
                             <constraint firstItem="67y-km-YpK" firstAttribute="trailing" secondItem="Quu-ri-lCf" secondAttribute="trailing" type="default" id="l4t-xD-YPc"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="クエスタ" id="YS3-cW-Avx"/>
+                    <navigationItem key="navigationItem" id="YS3-cW-Avx"/>
                     <connections>
                         <outlet property="_tableView" destination="67y-km-YpK" id="K6e-Ds-Kz8"/>
                     </connections>
