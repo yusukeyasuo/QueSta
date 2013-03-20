@@ -11,6 +11,8 @@
 @implementation EditStatusCell
 
 @synthesize containerView = _containerView;
+@synthesize containerView2 = _containerView2;
+@synthesize containerView3 = _containerView3;
 
 - (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
 {

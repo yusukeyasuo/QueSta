@@ -11,8 +11,12 @@
 @interface EditStatusCell : UITableViewCell
 {
     IBOutlet UIView *_containerView;
+    IBOutlet UIView *_containerView2;
+    IBOutlet UIView *_containerView3;
 }
 
 @property (nonatomic, strong) UIView *containerView;
+@property (nonatomic, strong) UIView *containerView2;
+@property (nonatomic, strong) UIView *containerView3;
 
 @end

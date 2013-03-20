@@ -20,6 +20,11 @@
 		70033C9D16F99FBB00A266F9 /* textForm@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 70033C9B16F99FBB00A266F9 /* textForm@2x.png */; };
 		70033CA016F9B21F00A266F9 /* navbar_background.png in Resources */ = {isa = PBXBuildFile; fileRef = 70033C9E16F9B21F00A266F9 /* navbar_background.png */; };
 		70033CA116F9B21F00A266F9 /* navbar_background@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 70033C9F16F9B21F00A266F9 /* navbar_background@2x.png */; };
+		70033CA416F9FCB100A266F9 /* clock2.png in Resources */ = {isa = PBXBuildFile; fileRef = 70033CA216F9FCB100A266F9 /* clock2.png */; };
+		70033CA516F9FCB100A266F9 /* clock2@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 70033CA316F9FCB100A266F9 /* clock2@2x.png */; };
+		70033CA816F9FD1300A266F9 /* money2.png in Resources */ = {isa = PBXBuildFile; fileRef = 70033CA616F9FD1300A266F9 /* money2.png */; };
+		70033CA916F9FD1300A266F9 /* money2@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 70033CA716F9FD1300A266F9 /* money2@2x.png */; };
+		70033CAB16FA00E600A266F9 /* balloon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 70033CAA16FA00E600A266F9 /* balloon@2x.png */; };
 		7078EED116EA30B300083811 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7078EED016EA30B300083811 /* UIKit.framework */; };
 		7078EED316EA30B300083811 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7078EED216EA30B300083811 /* Foundation.framework */; };
 		7078EED516EA30B300083811 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7078EED416EA30B300083811 /* CoreGraphics.framework */; };
@@ -69,6 +74,11 @@
 		70033C9B16F99FBB00A266F9 /* textForm@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "textForm@2x.png"; path = "images/textForm@2x.png"; sourceTree = "<group>"; };
 		70033C9E16F9B21F00A266F9 /* navbar_background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = navbar_background.png; path = images/navbar_background.png; sourceTree = "<group>"; };
 		70033C9F16F9B21F00A266F9 /* navbar_background@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "navbar_background@2x.png"; path = "images/navbar_background@2x.png"; sourceTree = "<group>"; };
+		70033CA216F9FCB100A266F9 /* clock2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = clock2.png; path = images/clock2.png; sourceTree = "<group>"; };
+		70033CA316F9FCB100A266F9 /* clock2@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "clock2@2x.png"; path = "images/clock2@2x.png"; sourceTree = "<group>"; };
+		70033CA616F9FD1300A266F9 /* money2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = money2.png; path = images/money2.png; sourceTree = "<group>"; };
+		70033CA716F9FD1300A266F9 /* money2@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "money2@2x.png"; path = "images/money2@2x.png"; sourceTree = "<group>"; };
+		70033CAA16FA00E600A266F9 /* balloon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "balloon@2x.png"; path = "images/balloon@2x.png"; sourceTree = "<group>"; };
 		7078EECD16EA30B300083811 /* QueSta.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QueSta.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7078EED016EA30B300083811 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		7078EED216EA30B300083811 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -208,6 +218,11 @@
 		7078EEFC16EAB09900083811 /* images */ = {
 			isa = PBXGroup;
 			children = (
+				70033CAA16FA00E600A266F9 /* balloon@2x.png */,
+				70033CA616F9FD1300A266F9 /* money2.png */,
+				70033CA716F9FD1300A266F9 /* money2@2x.png */,
+				70033CA216F9FCB100A266F9 /* clock2.png */,
+				70033CA316F9FCB100A266F9 /* clock2@2x.png */,
 				70033C9E16F9B21F00A266F9 /* navbar_background.png */,
 				70033C9F16F9B21F00A266F9 /* navbar_background@2x.png */,
 				70033C9A16F99FBB00A266F9 /* textForm.png */,
@@ -346,6 +361,11 @@
 				70033C9D16F99FBB00A266F9 /* textForm@2x.png in Resources */,
 				70033CA016F9B21F00A266F9 /* navbar_background.png in Resources */,
 				70033CA116F9B21F00A266F9 /* navbar_background@2x.png in Resources */,
+				70033CA416F9FCB100A266F9 /* clock2.png in Resources */,
+				70033CA516F9FCB100A266F9 /* clock2@2x.png in Resources */,
+				70033CA816F9FD1300A266F9 /* money2.png in Resources */,
+				70033CA916F9FD1300A266F9 /* money2@2x.png in Resources */,
+				70033CAB16FA00E600A266F9 /* balloon@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

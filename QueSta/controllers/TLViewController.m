@@ -70,7 +70,7 @@
 {
     switch (indexPath.section) {
         case 0:
-            return 170;
+            return 200;
             break;
             
         case 1:
@@ -130,6 +130,14 @@ forRowAtIndexPath:(NSIndexPath *)indexPath
         cell.containerView.backgroundColor = [UIColor colorWithRed:0.933 green:0.933 blue:0.933 alpha:1];
         cell.containerView.layer.shadowOpacity = 0.2f;
         cell.containerView.layer.shadowOffset = CGSizeMake(0, 2.0f);
+        
+        cell.containerView2.backgroundColor = [UIColor colorWithRed:0.933 green:0.933 blue:0.933 alpha:1];
+        cell.containerView2.layer.shadowOpacity = 0.2f;
+        cell.containerView2.layer.shadowOffset = CGSizeMake(0, 2.0f);
+        
+        cell.containerView3.backgroundColor = [UIColor colorWithRed:0.933 green:0.933 blue:0.933 alpha:1];
+        cell.containerView3.layer.shadowOpacity = 0.2f;
+        cell.containerView3.layer.shadowOffset = CGSizeMake(0, 2.0f);
         
         return cell;
         
