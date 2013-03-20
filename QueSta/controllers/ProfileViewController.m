@@ -32,9 +32,10 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"default_background.png"]];
-    self.navigationController.navigationBar.tintColor = [UIColor blackColor];
+    self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"black_background.png"]];
+    self.navigationController.navigationBar.tintColor = [UIColor colorWithRed:0 green:0.349 blue:0.698 alpha:1]; /*#0059b2*/
     _tableView.backgroundColor = [UIColor clearColor];
+    [[ProfileManager sharedManager] loadProfile];
     
     // UISegmentedControl 初期値の設定
     _segmentedControlStatus = 0;
@@ -111,17 +112,13 @@
     }
 }
 
-/*
 // Change UITableViewCell.backgroundColor
 - (void)tableView:(UITableView *)tableView
   willDisplayCell:(UITableViewCell *)cell
 forRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    if (indexPath.row == 1) {   // switchCell
-        cell.backgroundColor = [UIColor darkGrayColor];
-    }
+    cell.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"default_background.png"]];
 }
-*/
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
@@ -138,6 +135,7 @@ forRowAtIndexPath:(NSIndexPath *)indexPath
         cell.goalLabel.text = _profile.goal;
         cell.levelLabel.text = [NSString stringWithFormat:@"%d", _status.level];
         cell.pointLabel.text = [NSString stringWithFormat:@"%d/%d", _status.studyMinutes, _status.level*60];
+        cell.progressView.progress = _status.studyMinutes / (_status.level*60);
         
         CALayer *layer = [cell.badgeImageView layer];
         [layer setMasksToBounds:YES];

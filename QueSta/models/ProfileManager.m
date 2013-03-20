@@ -37,6 +37,23 @@ static ProfileManager *_sharedInstance = nil;
 {
     _profileArray = [[NSMutableArray alloc] init];
     [_profileArray addObject:profile];
+    [self saveProfile];
+}
+
+- (void)saveProfile
+{
+    _profileArray_paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+    _profileArray_directory = [_profileArray_paths objectAtIndex:0];
+    _profileArray_filePath = [_profileArray_directory stringByAppendingPathComponent:@"profileArray_data.dat"];
+    [NSKeyedArchiver archiveRootObject:_profileArray toFile:_profileArray_filePath];
+}
+
+- (void)loadProfile
+{
+    _profileArray_paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+    _profileArray_directory = [_profileArray_paths objectAtIndex:0];
+    _profileArray_filePath = [_profileArray_directory stringByAppendingPathComponent:@"profleArray_data.dat"];
+    _profileArray = [NSKeyedUnarchiver unarchiveObjectWithFile:_profileArray_filePath];
 }
 
 @end

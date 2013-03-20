@@ -30,8 +30,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"default_background.png"]];
-    self.navigationController.navigationBar.tintColor = [UIColor blackColor];
+    self.navigationController.navigationBar.tintColor = [UIColor colorWithRed:0 green:0.349 blue:0.698 alpha:1]; /*#0059b2*/
     self.tableView.backgroundView = nil;
     self.tableView.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"default_background.png"]];
     
@@ -109,7 +108,6 @@
 
 - (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info
 {
-    NSLog(@"selected");
     _profileImage = [info objectForKey:UIImagePickerControllerEditedImage];
     [self dismissViewControllerAnimated:YES completion:nil];
     [self.tableView reloadData];
@@ -120,11 +118,11 @@
 {
     switch (textField.tag) {
         case 1:
-            _name = textField.text;
+            _name = [NSString stringWithFormat:@"%@%@", textField.text, string];
             break;
             
         case 2:
-            _goal = textField.text;
+            _goal = [NSString stringWithFormat:@"%@%@", textField.text, string];
             break;
             
         default:

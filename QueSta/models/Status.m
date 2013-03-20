@@ -25,4 +25,26 @@
     return self;
 }
 
+- (id)initWithCoder:(NSCoder*)decoder
+{
+    self = [super init];
+    if (!self) {
+        return nil;
+    }
+    
+    _studyMinutesAll = [decoder decodeIntegerForKey:@"studyMinutesAll"];
+    _studyMinutes = [decoder decodeIntegerForKey:@"studyMinutes"];
+    _level = [decoder decodeIntegerForKey:@"level"];
+    
+    return self;
+}
+
+- (void)encodeWithCoder:(NSCoder*)encoder
+{
+    [encoder encodeInteger:_studyMinutesAll forKey:@"studyMinutesAll"];
+    [encoder encodeInteger:_studyMinutes forKey:@"studyMinutes"];
+    [encoder encodeInteger:_level forKey:@"level"];
+}
+
+
 @end

@@ -1,22 +1,14 @@
 //
-//  ProfileCell.m
+//  EditStatusSubmitCell.m
 //  QueSta
 //
-//  Created by yusuke_yasuo on 2013/03/09.
+//  Created by yusuke_yasuo on 2013/03/20.
 //  Copyright (c) 2013年 yusuke_yasuo. All rights reserved.
 //
 
-#import "ProfileCell.h"
+#import "EditStatusSubmitCell.h"
 
-@implementation ProfileCell
-
-@synthesize profileImageView = _profileImageView;
-@synthesize badgeImageView = _badgeImageView;
-@synthesize nameLabel = _nameLabel;
-@synthesize goalLabel = _goalLabel;
-@synthesize levelLabel = _levelLabel;
-@synthesize pointLabel = _pointLabel;
-@synthesize progressView = _progressView;
+@implementation EditStatusSubmitCell
 
 - (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
 {

@@ -16,6 +16,7 @@
     IBOutlet UILabel *_goalLabel;
     IBOutlet UILabel *_levelLabel;
     IBOutlet UILabel *_pointLabel;
+    IBOutlet UIProgressView *_progressView;
 }
 
 @property (nonatomic, strong) UIImageView *profileImageView;
@@ -24,5 +25,6 @@
 @property (nonatomic, strong) UILabel *goalLabel;
 @property (nonatomic, strong) UILabel *levelLabel;
 @property (nonatomic, strong) UILabel *pointLabel;
+@property (nonatomic, strong) UIProgressView *progressView;
 
 @end

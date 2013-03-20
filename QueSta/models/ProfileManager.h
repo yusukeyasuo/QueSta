@@ -12,11 +12,18 @@
 @interface ProfileManager : NSObject
 {
     NSMutableArray *_profileArray;
+    NSArray *_dummyArray;
+    
+    NSArray *_profileArray_paths;
+    NSString *_profileArray_directory;
+    NSString *_profileArray_filePath;
 }
 
 @property (nonatomic, readonly) NSArray *profileArray;
 
 + (ProfileManager *)sharedManager;
 - (void)updateProfileArray:(Profile *)profile;
+- (void)saveProfile;
+- (void)loadProfile;
 
 @end
