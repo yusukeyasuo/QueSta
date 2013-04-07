@@ -25,6 +25,9 @@
 		70033CA816F9FD1300A266F9 /* money2.png in Resources */ = {isa = PBXBuildFile; fileRef = 70033CA616F9FD1300A266F9 /* money2.png */; };
 		70033CA916F9FD1300A266F9 /* money2@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 70033CA716F9FD1300A266F9 /* money2@2x.png */; };
 		70033CAB16FA00E600A266F9 /* balloon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 70033CAA16FA00E600A266F9 /* balloon@2x.png */; };
+		70033CB016FB5A3500A266F9 /* name.png in Resources */ = {isa = PBXBuildFile; fileRef = 70033CAE16FB5A3500A266F9 /* name.png */; };
+		70033CB116FB5A3500A266F9 /* name@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 70033CAF16FB5A3500A266F9 /* name@2x.png */; };
+		70033CB416FB5AB800A266F9 /* EditProfileCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 70033CB316FB5AB800A266F9 /* EditProfileCell.m */; };
 		7078EED116EA30B300083811 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7078EED016EA30B300083811 /* UIKit.framework */; };
 		7078EED316EA30B300083811 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7078EED216EA30B300083811 /* Foundation.framework */; };
 		7078EED516EA30B300083811 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7078EED416EA30B300083811 /* CoreGraphics.framework */; };
@@ -57,6 +60,8 @@
 		7098331B16EDEAE10093CA7D /* StatusManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 7098331A16EDEAE10093CA7D /* StatusManager.m */; };
 		7098331E16EE0D470093CA7D /* ProfileManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 7098331D16EE0D470093CA7D /* ProfileManager.m */; };
 		70B43CF216F902B9008814BB /* LabelCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 70B43CF116F902B9008814BB /* LabelCell.m */; };
+		70F26F25170826010048E7E1 /* TLManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 70F26F24170826010048E7E1 /* TLManager.m */; };
+		70F26F28170826180048E7E1 /* TL.m in Sources */ = {isa = PBXBuildFile; fileRef = 70F26F27170826180048E7E1 /* TL.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -79,6 +84,10 @@
 		70033CA616F9FD1300A266F9 /* money2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = money2.png; path = images/money2.png; sourceTree = "<group>"; };
 		70033CA716F9FD1300A266F9 /* money2@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "money2@2x.png"; path = "images/money2@2x.png"; sourceTree = "<group>"; };
 		70033CAA16FA00E600A266F9 /* balloon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "balloon@2x.png"; path = "images/balloon@2x.png"; sourceTree = "<group>"; };
+		70033CAE16FB5A3500A266F9 /* name.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = name.png; path = images/name.png; sourceTree = "<group>"; };
+		70033CAF16FB5A3500A266F9 /* name@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "name@2x.png"; path = "images/name@2x.png"; sourceTree = "<group>"; };
+		70033CB216FB5AB800A266F9 /* EditProfileCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EditProfileCell.h; path = views/EditProfileCell.h; sourceTree = "<group>"; };
+		70033CB316FB5AB800A266F9 /* EditProfileCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EditProfileCell.m; path = views/EditProfileCell.m; sourceTree = "<group>"; };
 		7078EECD16EA30B300083811 /* QueSta.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QueSta.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7078EED016EA30B300083811 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		7078EED216EA30B300083811 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -130,6 +139,10 @@
 		7098331D16EE0D470093CA7D /* ProfileManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ProfileManager.m; path = models/ProfileManager.m; sourceTree = "<group>"; };
 		70B43CF016F902B9008814BB /* LabelCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LabelCell.h; path = views/LabelCell.h; sourceTree = "<group>"; };
 		70B43CF116F902B9008814BB /* LabelCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LabelCell.m; path = views/LabelCell.m; sourceTree = "<group>"; };
+		70F26F23170826010048E7E1 /* TLManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TLManager.h; path = models/TLManager.h; sourceTree = "<group>"; };
+		70F26F24170826010048E7E1 /* TLManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TLManager.m; path = models/TLManager.m; sourceTree = "<group>"; };
+		70F26F26170826180048E7E1 /* TL.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TL.h; path = models/TL.h; sourceTree = "<group>"; };
+		70F26F27170826180048E7E1 /* TL.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TL.m; path = models/TL.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -218,6 +231,8 @@
 		7078EEFC16EAB09900083811 /* images */ = {
 			isa = PBXGroup;
 			children = (
+				70033CAE16FB5A3500A266F9 /* name.png */,
+				70033CAF16FB5A3500A266F9 /* name@2x.png */,
 				70033CAA16FA00E600A266F9 /* balloon@2x.png */,
 				70033CA616F9FD1300A266F9 /* money2.png */,
 				70033CA716F9FD1300A266F9 /* money2@2x.png */,
@@ -255,6 +270,8 @@
 				7098330B16EC64DB0093CA7D /* EditProfileImageCell.m */,
 				7098330D16EC64F10093CA7D /* EditProfileTextCell.h */,
 				7098330E16EC64F10093CA7D /* EditProfileTextCell.m */,
+				70033CB216FB5AB800A266F9 /* EditProfileCell.h */,
+				70033CB316FB5AB800A266F9 /* EditProfileCell.m */,
 				7078EF9B16EB9FDD00083811 /* SwitchCell.h */,
 				7078EF9C16EB9FDE00083811 /* SwitchCell.m */,
 				7078EF9416EB521A00083811 /* GraphCell.h */,
@@ -278,10 +295,14 @@
 				7098331116EDAC4A0093CA7D /* Profile.m */,
 				7098331616EDEACF0093CA7D /* Status.h */,
 				7098331716EDEACF0093CA7D /* Status.m */,
+				70F26F26170826180048E7E1 /* TL.h */,
+				70F26F27170826180048E7E1 /* TL.m */,
 				7098331C16EE0D470093CA7D /* ProfileManager.h */,
 				7098331D16EE0D470093CA7D /* ProfileManager.m */,
 				7098331916EDEAE00093CA7D /* StatusManager.h */,
 				7098331A16EDEAE10093CA7D /* StatusManager.m */,
+				70F26F23170826010048E7E1 /* TLManager.h */,
+				70F26F24170826010048E7E1 /* TLManager.m */,
 			);
 			name = models;
 			sourceTree = "<group>";
@@ -366,6 +387,8 @@
 				70033CA816F9FD1300A266F9 /* money2.png in Resources */,
 				70033CA916F9FD1300A266F9 /* money2@2x.png in Resources */,
 				70033CAB16FA00E600A266F9 /* balloon@2x.png in Resources */,
+				70033CB016FB5A3500A266F9 /* name.png in Resources */,
+				70033CB116FB5A3500A266F9 /* name@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -394,6 +417,9 @@
 				7098331E16EE0D470093CA7D /* ProfileManager.m in Sources */,
 				70B43CF216F902B9008814BB /* LabelCell.m in Sources */,
 				70033C8716F95EAA00A266F9 /* EditStatusCell.m in Sources */,
+				70033CB416FB5AB800A266F9 /* EditProfileCell.m in Sources */,
+				70F26F25170826010048E7E1 /* TLManager.m in Sources */,
+				70F26F28170826180048E7E1 /* TL.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

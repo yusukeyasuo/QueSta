@@ -42,6 +42,7 @@ static ProfileManager *_sharedInstance = nil;
 
 - (void)saveProfile
 {
+    NSLog(@"saveProfile");
     _profileArray_paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
     _profileArray_directory = [_profileArray_paths objectAtIndex:0];
     _profileArray_filePath = [_profileArray_directory stringByAppendingPathComponent:@"profileArray_data.dat"];
@@ -50,9 +51,10 @@ static ProfileManager *_sharedInstance = nil;
 
 - (void)loadProfile
 {
+    NSLog(@"loadProfile");
     _profileArray_paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
     _profileArray_directory = [_profileArray_paths objectAtIndex:0];
-    _profileArray_filePath = [_profileArray_directory stringByAppendingPathComponent:@"profleArray_data.dat"];
+    _profileArray_filePath = [_profileArray_directory stringByAppendingPathComponent:@"profileArray_data.dat"];
     _profileArray = [NSKeyedUnarchiver unarchiveObjectWithFile:_profileArray_filePath];
 }
 

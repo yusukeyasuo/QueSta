@@ -9,6 +9,7 @@
 #import "LabelCell.h"
 
 @implementation LabelCell
+@synthesize checkinCount = _checkinCount;
 
 - (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
 {

@@ -1,21 +1,14 @@
 //
-//  TLCell.m
+//  EditProfileCell.m
 //  QueSta
 //
-//  Created by yusuke_yasuo on 2013/03/10.
+//  Created by yusuke_yasuo on 2013/03/22.
 //  Copyright (c) 2013年 yusuke_yasuo. All rights reserved.
 //
 
-#import "TLCell.h"
+#import "EditProfileCell.h"
 
-@implementation TLCell
-
-@synthesize profileImageView = _profileImageView;
-@synthesize containerView = _containerView;
-@synthesize nameLabel = _nameLabel;
-@synthesize minutesLabel = _minutesLabel;
-@synthesize datetimeLabel = _datetimeLabel;
-@synthesize moneyLabel = _moneyLabel;
+@implementation EditProfileCell
 
 - (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
 {

@@ -7,6 +7,7 @@
 //
 
 #import "EditProfileViewController.h"
+#import "EditProfileCell.h"
 #import "EditProfileImageCell.h"
 #import "EditProfileTextCell.h"
 #import "ProfileManager.h"

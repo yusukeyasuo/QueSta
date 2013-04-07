@@ -9,5 +9,10 @@
 #import <UIKit/UIKit.h>
 
 @interface LabelCell : UITableViewCell
+{
+    UILabel *_checkinCount;
+}
+
+@property (nonatomic, strong) UILabel *checkinCount;
 
 @end

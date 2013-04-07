@@ -13,6 +13,9 @@
 @synthesize containerView = _containerView;
 @synthesize containerView2 = _containerView2;
 @synthesize containerView3 = _containerView3;
+@synthesize timeTF = _timeTF;
+@synthesize moneyTF = _moneyTF;
+@synthesize commentTF = _commentTF;
 
 - (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
 {

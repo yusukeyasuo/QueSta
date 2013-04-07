@@ -8,10 +8,21 @@
 
 #import <UIKit/UIKit.h>
 #import <QuartzCore/QuartzCore.h>
+#import "Profile.h"
 
-@interface TLViewController : UIViewController <UITextFieldDelegate>
+@interface TLViewController : UIViewController <UITextFieldDelegate, UIPickerViewDelegate, UIPickerViewDataSource>
 {
     IBOutlet UITableView *_tableView;
+    UIPickerView *_pickerView;
+    
+    CGRect _screenRect;
+    NSString *_studyMinutes;
+    NSInteger _hour;
+    NSInteger _minutes;
+    NSInteger _expense;
+    NSString *_comment;
+    NSMutableArray *_tlArray;
+    Profile *_profile;
 }
 
 @end
